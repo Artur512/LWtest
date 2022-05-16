@@ -1,0 +1,44 @@
+[
+  {
+    "id": 1,
+    "departure": "Girona Airport",
+    "arrival": "London",
+    "seat": "3A",
+    "vehicleNumber": "SK22",
+    "vehicleType": "plane",
+    "hints": [
+      "Gate 45B",
+      "Baggage drop at ticket counter 344."
+    ]
+  },
+  {
+    "id": 2,
+    "departure": "Barcelona",
+    "arrival": "Girona Airport",
+    "seat": null,
+    "vehicleNumber": null,
+    "vehicleType": "bus",
+    "hints": null
+  },
+  {
+    "id": 3,
+    "departure": "London",
+    "arrival": "New York JFK",
+    "seat": "7B",
+    "vehicleType": "plane",
+    "transport": "flight SK455",
+    "hints": [
+      "Gate 22",
+      "Baggage will we automatically transferred from your last leg."
+    ]
+  },
+  {
+    "id": 4,
+    "departure": "Madrid",
+    "arrival": "Barcelona",
+    "seat": "45B",
+    "vehicleNumber": "78A",
+    "vehicleType": "train",
+    "hints": null
+  }
+]

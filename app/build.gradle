@@ -1,0 +1,64 @@
+plugins {
+    id 'com.android.application'
+    id 'org.jetbrains.kotlin.android'
+    id 'kotlin-parcelize'
+    id 'kotlin-kapt'
+    id 'dagger.hilt.android.plugin'
+    id 'androidx.navigation.safeargs.kotlin'
+}
+apply from: "../ktlint.gradle"
+android {
+    compileSdk 31
+
+    defaultConfig {
+        applicationId "com.volcode.app"
+        minSdk 26
+        targetSdk 31
+        versionCode 1
+        versionName "1.0"
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+    kotlinOptions {
+        jvmTarget = '1.8'
+    }
+    packagingOptions {
+        exclude 'META-INF/LICENSE.md'
+        exclude 'META-INF/LICENSE-notice.md'
+    }
+}
+
+dependencies {
+    implementation project(path: ':core-feature')
+    implementation project(path: ':cards')
+
+    implementation "androidx.core:core-ktx:$versions.coreKtx"
+    implementation "androidx.appcompat:appcompat:$versions.appCompat"
+    implementation "androidx.constraintlayout:constraintlayout:$versions.constraintLayout"
+    implementation "androidx.navigation:navigation-fragment-ktx:$versions.navigationComponents"
+    implementation "androidx.navigation:navigation-ui-ktx:$versions.navigationComponents"
+    implementation "androidx.lifecycle:lifecycle-livedata-ktx:$versions.lifecycle"
+    implementation "androidx.lifecycle:lifecycle-service:$versions.lifecycle"
+
+    implementation "com.google.android.material:material:$versions.material"
+
+    implementation "com.jakewharton.timber:timber:$versions.timber"
+
+    implementation "com.google.dagger:hilt-android:$versions.hiltCore"
+    implementation 'androidx.legacy:legacy-support-v4:1.0.0'
+    kapt "com.google.dagger:hilt-compiler:$versions.hiltCore"
+    kapt "androidx.hilt:hilt-compiler:$versions.hiltCompiler"
+    androidTestImplementation "com.google.dagger:hilt-android-testing:$versions.hiltCore"
+    kaptAndroidTest "com.google.dagger:hilt-compiler:$versions.hiltCore"
+}

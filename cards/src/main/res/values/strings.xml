@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="boarding_cards_title_sorted">Sorted Trip:</string>
+    <string name="boarding_cards_title">Unsorted Boarding Cards:</string>
+    <string name="cards_unsorted_elements_title">Unsorted boarding Cards</string>
+    <string name="cards_sorted_elements_title">Sorted trip</string>
+    <string name="cards_button_sort_trip">Sort trip</string>
+</resources>

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph_feature"
+    app:startDestination="@id/boardingPassFragment">
+
+    <fragment
+        android:id="@+id/boardingPassFragment"
+        android:name="com.volcode.cards.ui.boardingcards.BoardingPassFragment"
+        android:label="boarding_pass_fragment"
+        tools:layout="@layout/boarding_pass_fragment" />
+</navigation>
